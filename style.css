@@ -1,0 +1,144 @@
+/*-----------------------------------*\ 
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2021 @codewithsadee 
+ */
+
+
+
+
+
+/*-----------------------------------*\ 
+  #VARIABLE
+\*-----------------------------------*/
+
+:root {
+
+  /**
+   * colors 
+   */
+
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray:    hsl(0, 0%, 98%);
+  --grayish-blue:       hsl(233, 8%, 62%);
+  --bright-cyan:        hsl(192, 70%, 51%);
+  --lime-green:         hsl(136, 65%, 51%);
+  --dark-blue:          hsl(233, 26%, 24%);
+  --white:              hsl(0, 0%, 100%);
+
+  /**
+   * spacing 
+   */
+
+  --px: 20px;
+
+}
+
+
+
+
+
+/*-----------------------------------*\ 
+  #RESET
+\*-----------------------------------*/
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+  list-style:none;
+}
+
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  height:100vh;
+  width:100vw;
+}
+
+.navbar {
+  position:absolute;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  box-sizing:border-box;
+}
+.navbar a {
+  color:black;
+}
+.navbar .logo {
+  font-size:2em;
+  font-weight:bold;
+}
+
+
+
+.navbar .nav-links ul  {
+  display:flex;
+ 
+}
+.navbar .nav-links ul  li{
+  margin: 0 25px;
+ 
+}
+.navbar .nav-links ul  li.active a {
+  color:red;
+  font-weight:600;
+ 
+}
+
+
+.navbar .menu-hamburger {
+  display:none;
+  width:35px;
+  position:absolute;
+  right:50px;
+  top:50px;
+}
+@media screen and (max-width:900px){
+  .navbar {
+    padding:0;
+  }
+  .nav-links ul {
+    flex-direction:column;
+    display:flex;
+  }
+  .nav-links {
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    backdrop-filter: blur(7px);
+    margin-left:-100%;
+    transition:all 0.5s ease;
+  }
+  .navbar .menu-hamburger {
+    display:block;
+  }
+  .navbar .nav-links ul  li{
+    margin:25px 0 ;
+    font-size:1.2em;
+   
+  }
+  .navbar .logo {
+    position:absolute;
+    top:50px;
+    left:50px;
+   
+  }
+}
+
+
+.mobile-menu {
+  margin-left:0;
+}
